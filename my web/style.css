@@ -1,0 +1,53 @@
+ body {
+      font-family: 'Inter', sans-serif;
+    }
+     #hoverBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Add black overlay on top of background */
+  #hoverBg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(116, 116, 116, 0.6); /* black with 60% opacity */
+  }
+
+  @keyframes bounceHover {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .skill-icon:hover {
+      animation: bounceHover 0.6s;
+    }
+
+    /* Add spacing at the bottom of every section */
+section {
+    margin-bottom: 80px;  /* adjust value as you like (50px, 100px, etc.) */
+}
+
+/* Optional: On smaller screens, increase spacing so sections don’t stick */
+@media (max-width: 768px) {
+    section {
+        margin-bottom: 100px;
+    }
+}
+.experience-swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  border-bottom: 1px solid #e5e7eb; /* subtle divider */
+}
