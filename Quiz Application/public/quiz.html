@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Quiz App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 640px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="card">
+        <h1 style="display: flex; align-items: center; justify-content: center; gap: 0px; margin: 0;">
+  <img src="logo.png" alt="" style="width: 150px; height: 150px;">
+  RomeWare Programming
+</h1>
+      <div id="landing">
+        <input id="username" type="text" placeholder="Enter your name" />
+        <select id="category">
+          <option value="" disabled selected>Select Category</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="php">PHP</option>
+          <option value="mysql">MySQL</option>
+        </select>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
+
+      <div id="quiz-box" class="hidden">
+        <div id="header">
+          <span id="timer">Time left: 15s</span>
+          <div class="progress-container"><div id="progress-bar"></div></div>
+        </div>
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-container"></div>
+        <button id="next-btn" class="btn hidden">Next</button>
+      </div>
+
+      <div id="result" class="hidden"></div>
+
+      <div id="leaderboard-section">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+      </div>
+
+      <!-- Sounds -->
+      <audio id="correctSound" src="../sounds/right.mp3" preload="auto"></audio>
+      <audio id="wrongSound" src="../sounds/wrong.mp3" preload="auto"></audio>
+      <audio id="timeoutSound" src="../sounds/wrong.mp3" preload="auto"></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
