@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern To-Do List with Categories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar for Categories -->
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <ul id="categoryList"></ul>
+      <div class="add-category">
+        <input type="text" id="newCategoryInput" placeholder="New Category...">
+        <button id="addCategoryBtn">+</button>
+      </div>
+    </aside>
+
+    <!-- Main To-Do Section -->
+    <main class="main">
+      <h1 id="selectedCategoryTitle"> Select a Category</h1>
+
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <select id="categorySelect"></select>
+        <button id="addTaskBtn">Add</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
